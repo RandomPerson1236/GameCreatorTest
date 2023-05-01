@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game-Creator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/arcade-classic" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <h1>Game Creator🎮</h1>
+        <button class="button-s-zzz" id="run-code" title="Run Simulator"><i class="fa fa-play"></i></button>
+        <button class="button-s-zzz" id="stop-code" title="Stop Simulator"><i class="fa fa-stop"></i></button>
+        <button class="button-s-zzz" id="settings" title="Settings"><i class="fa fa-cog"></i></button>
+        <a class="button-s-zzz" id="examples-code" title="Examples" style="margin-left: 30px;" href="./examples.html">
+            <i class="fa fa-code"></i></a>
+    </nav>
+    <m-container>
+        <div id="game-container">
+            <div id="game-inner-container">
+                <iframe id="sim-win"></iframe>
+                <div id="sim-load">
+                    <div id="circle1"></div>
+                </div>
+            </div>
+        </div>
+        <div id="leftside-container">
+            <div id="code-examples-container">
+                <div class="side-code-ex-container">
+                    <div class="code-block-side">drawText</div>
+                    <p><b>Draw text to the screen</b>
+                       <code>scene.drawText(<em>text, color, fontSize, dx, dy, otherOptions{ font }</em>)</code>
+                    </p>
+                </div>
+                <div class="side-code-ex-container">
+                    <div class="code-block-side">create</div>
+                    <p><b>Creates a new sprite</b>
+                        <code>sprite.create(<em>img, dx, dy, width, height</em>)</code>
+                     </p>
+                </div>
+                <div class="side-code-ex-container">
+                    <div class="code-block-side">draw</div>
+                    <p><b>Use to draw your created sprite to screen.</b>
+                        <code>yourSprite.draw(<em>{ controller, options:{speed, x, y}}</em>)</code>
+                     </p>
+                </div>
+                <div class="side-code-ex-container">
+                    <div class="code-block-side">x</div>
+                    <p><b>The X Axis of your sprite.</b>
+                        <code>yourSprite.x()</code>
+                     </p>
+                </div>
+                <div class="side-code-ex-container">
+                    <div class="code-block-side">y</div>
+                    <p><b>The Y Axis of your sprite.</b>
+                        <code>yourSprite.y()</code>
+                     </p>
+                </div>
+                <div class="side-code-ex-container">
+                    <div class="code-block-side">randInt</div>
+                    <p><b>Pick a random int (min and max).</b>
+                        <code>Mathf.randInt(min, max)</code>
+                     </p>
+                </div>
+            </div>
+            <div id="editor-container"></div>
+        </div>
+    </m-container>
+
+    <script src="https://unpkg.com/monaco-editor@0.17.0/min/vs/loader.js"></script>
+    <script src="scripts/main.js" type="module"></script>
+    <script src="scripts/code-explorer.js"></script>
+</body>
+</html>
